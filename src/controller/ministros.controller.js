@@ -4,7 +4,7 @@ import { Ministro } from "../models/Ministro.js";
 //busca todos los proyectos
 export const getMinistros = async (req, res) => {
   try {
-    const ministros = await Task.findAll({
+    const ministros = await Ministro.findAll({
       attributes: [
         "Id",
         "Nombres",
@@ -61,7 +61,7 @@ export const addMinistro = async (req, res) => {
       TipoMinistro,
       IglesiaId,
     } = req.body;
-    const newMinistro = await Task.create({
+    const newMinistro = await Ministro.create({
       Id,
       Nombres,
       Apellidos,

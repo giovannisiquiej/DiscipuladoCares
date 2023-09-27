@@ -43,6 +43,6 @@ export const Ministro = sequelize.define("ministro", {
   TipoMinistro: {
     type: DataTypes.STRING(30),
     allowNull: false,
-    defaultValue: "Pastor", // Apostol / Profeta / Evangelista / Pastor / Maestro
+    defaultValue: "Pastor", // Apostol / prOfeta / Evangelista / Pastor / Maestro
   },
 });

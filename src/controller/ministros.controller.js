@@ -50,7 +50,6 @@ export const getMinistro = async (req, res) => {
 export const addMinistro = async (req, res) => {
   try {
     const {
-      Id,
       Nombres,
       Apellidos,
       ApellidoCasada,
@@ -58,11 +57,11 @@ export const addMinistro = async (req, res) => {
       FechaNacimiento,
       Genero,
       NumeroIdentificacion,
+      Estado,
       TipoMinistro,
       IglesiaId,
     } = req.body;
     const newMinistro = await Ministro.create({
-      Id,
       Nombres,
       Apellidos,
       ApellidoCasada,
@@ -70,6 +69,7 @@ export const addMinistro = async (req, res) => {
       FechaNacimiento,
       Genero,
       NumeroIdentificacion,
+      Estado,
       TipoMinistro,
       IglesiaId,
     });
@@ -89,6 +89,7 @@ export const updateMinistro = async (req, res) => {
       Direccion,
       FechaNacimiento,
       Genero,
+      Estado,
       NumeroIdentificacion,
       TipoMinistro,
       IglesiaId,
@@ -102,6 +103,7 @@ export const updateMinistro = async (req, res) => {
     ministro.Direccion = Direccion;
     ministro.FechaNacimiento = FechaNacimiento;
     ministro.Genero = Genero;
+    ministro.Estado = Estado;
     ministro.NumeroIdentificacion = NumeroIdentificacion;
     ministro.TipoMinistro = TipoMinistro;
     ministro.IglesiaId = IglesiaId;

@@ -11,6 +11,7 @@ export const Iglesia = sequelize.define("iglesia", {
   Nombre: {
     type: DataTypes.STRING(75),
     allowNull: false,
+    unique: true,
   },
   Direccion: {
     type: DataTypes.STRING(500),
